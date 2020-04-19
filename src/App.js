@@ -1,19 +1,10 @@
 import React from 'react'
 import './assets/sass/index.scss'
-import PageTime from './views/PageTime'
-import PageFinances from './views/PageFinances'
-import { Switch, Route } from 'react-router-dom'
+import routes, { RenderRoutes } from './routes'
 function App() {
   return (
     <div className="App">
-      <Switch>
-        <Route path="/">
-          <PageTime></PageTime>
-        </Route>
-        <Route path="/finances">
-          <PageFinances></PageFinances>
-        </Route>
-      </Switch>
+      <RenderRoutes routes={routes} />
     </div>
   )
 }

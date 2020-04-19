@@ -10,8 +10,10 @@ const Time = () => {
 
     useEffect(() => {
             const age = localStorage.getItem('age')
+            console.log(age);
             if (age) {
                 setDate(age)
+                setOutput(age)
                 submit(age)
             }
             setLoading(false)
