@@ -43,12 +43,14 @@ export function RenderRoutes({ routes }) {
         <BrowserRouter>
             <ComponentMenu list={list}></ComponentMenu>
             <ComponentHeader title={'прикольный заголовок'}></ComponentHeader>
-            <Switch>
-                {routes.map((route, i) => {
-                return <RouteWithSubRoutes key={route.key} {...route} />
-                })}
-                <Route component={() => <h1>Не существует</h1>} />
-            </Switch>
+            <div className="container__content">
+                <Switch>
+                    {routes.map((route, i) => {
+                    return <RouteWithSubRoutes key={route.key} {...route} />
+                    })}
+                    <Route component={() => <h1>Не существует</h1>} />
+                </Switch>
+            </div>
         </BrowserRouter>
     )
 }

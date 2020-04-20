@@ -1,0 +1,30 @@
+
+@font-face {
+  font-family: 'Fira';
+  src: url('../fonts/firasans/FiraSans-Bold.otf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira';
+  letter-spacing: 1.5px;
+}
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 560px;
+  height: 100vh;
+  margin: 0 auto;
+  flex-direction: column;
+  color: #2c3e50;
+
+  &__content {
+    display: flex;
+    height: calc(100vh - 100px);
+  }
+}
+
+.marginDense {
+  margin: 10px !important
+}

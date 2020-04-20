@@ -1,9 +1,9 @@
 import React from 'react'
-import './assets/sass/index.scss'
+import './assets/scss/index.scss'
 import routes, { RenderRoutes } from './routes'
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <RenderRoutes routes={routes} />
     </div>
   )

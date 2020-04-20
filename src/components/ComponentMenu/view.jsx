@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, Router, useHistory } from 'react-router-dom'
-import style from '../../assets/sass/menu.module.scss'
+import style from '../../assets/scss/menu.module.scss'
 import { Close } from '@material-ui/icons'
 const Menu = ({ switchMenu, isOpen, list }) => {
     const history = useHistory()

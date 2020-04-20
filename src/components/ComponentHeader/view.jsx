@@ -1,6 +1,6 @@
  
 import React from 'react'
-import s from '../../assets/sass/header.module.scss'
+import s from '../../assets/scss/header.module.scss'
 import { Dehaze } from '@material-ui/icons'
 import { useHistory } from 'react-router-dom'
 

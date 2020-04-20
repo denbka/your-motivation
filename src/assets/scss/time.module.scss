@@ -1,0 +1,46 @@
+.timeContainer {
+    font-size: 3em;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    span {
+        margin-left: 5px;
+        min-width: 320px;
+    }
+}
+
+.typing {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    button, input {
+        border: 0;
+        outline: 0;
+    }
+
+    input {
+        -webkit-appearance: none;
+        -webkit-border-radius:0px;
+        border-radius: 0px;
+        border-bottom: 1px solid rgb(104, 214, 90);
+        margin-bottom: 25px;
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+
+    button {
+        padding: 10px 0;
+        border-radius: 3px;
+        color: #fff;
+        background: rgb(104, 214, 90);
+        font-size: 20px;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
