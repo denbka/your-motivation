@@ -3,7 +3,7 @@ import PageTime from './views/PageTime'
 import PageFinances from './views/PageFinances'
 import ComponentMenu from './components/ComponentMenu/container'
 import ComponentHeader from './components/ComponentHeader/container'
-import { Switch, Route, BrowserRouter, Link } from 'react-router-dom'
+import { Switch, Route, BrowserRouter, Link, useHistory } from 'react-router-dom'
 
 const list = [
     { path: '/', name: 'Главная' },
@@ -15,14 +15,20 @@ const ROUTES = [
         path: '/',
         key: 'base',
         exact: true,
-        component: () => <PageTime></PageTime>
+        component: () => <div style={{width: '100%'}}>
+            <ComponentHeader></ComponentHeader>
+            <PageTime></PageTime>
+        </div>
     },
     {
         path: '/finances',
         key: 'finances',
         exact: true,
         title: 'Мои финансы',
-        component: () => <PageFinances></PageFinances>
+        component: () => <div style={{width: '100%'}}>
+                <ComponentHeader title="Мои финансы"></ComponentHeader>
+                <PageFinances></PageFinances>
+            </div>
     }
 ]
 
@@ -42,11 +48,10 @@ export function RenderRoutes({ routes }) {
     return (
         <BrowserRouter>
             <ComponentMenu list={list}></ComponentMenu>
-            <ComponentHeader title={'прикольный заголовок'}></ComponentHeader>
             <div className="container__content">
                 <Switch>
                     {routes.map((route, i) => {
-                    return <RouteWithSubRoutes key={route.key} {...route} />
+                    return <RouteWithSubRoutes key={route.key} {...route} title="1231" />
                     })}
                     <Route component={() => <h1>Не существует</h1>} />
                 </Switch>

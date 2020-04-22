@@ -1,0 +1,47 @@
+.finances {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.wastes {
+    display: flex;
+    flex-direction: column;
+}
+
+.wastesForm {
+    margin: 25px 0 50px 0;
+}
+
+.wastesTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wastesTitleItem {
+    flex: 1;
+}
+
+.wastesTitleItem:last-child {
+    text-align: center;
+}
+
+.tableList {
+    display: flex;
+    flex-direction: column;
+}
+
+.tableListRow {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tableListColumn {
+    flex: 1;
+}
+
+.tableListColumn:last-child {
+    text-align: center;
+}
